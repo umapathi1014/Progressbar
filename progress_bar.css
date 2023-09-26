@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    place-items: center;
+    background: rgb(3,3,27);
+}
+.container{
+    display:grid;
+    place-items: center;
+}
+.bar{
+    position: relative;
+    width:250px;
+    height:20px;
+    background:#ffffff33;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bar::after{
+    content: '';
+    width:0;
+    height: 100%;
+    position: absolute;
+    background-color:#fff;
+    animation:progress 5s ease-in-out infinite;
+}
+@keyframes progress{
+    to {
+        width:100%
+    }
+}
